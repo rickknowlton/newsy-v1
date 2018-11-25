@@ -4,14 +4,17 @@
   "description": "newsy is a MERN stack application built to deliver and save articles on demand from the New York Times.",
   "main": "server.js",
   "scripts": {
+    "server": "node server.js",
+    "client": "cd client && npm run start",
     "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
     "start:prod": "node server.js",
     "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",
-    "client": "cd client && npm run start",
-    "install": "cd client && npm install",
+    "install": "cd client && yarn install",
     "build": "cd client && npm run build",
+    "heroku-prebuild": "cd client && npm install",
     "heroku-postbuild": "npm run build"
 },
+
   "repository": {
     "type": "git",
     "url": "git+https://github.com/rickknowlton/newsy.git"
@@ -28,7 +31,6 @@
     "bluebird": "^3.5.3",
     "body-parser": "^1.18.3",
     "express": "^4.16.4",
-    "if-env": "^1.0.4",
     "mongoose": "^5.3.13",
     "react": "^16.6.3",
     "react-materialize": "^2.5.0",
