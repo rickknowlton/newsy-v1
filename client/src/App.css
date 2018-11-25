@@ -1,0 +1,20 @@
+body, input {
+    font-family: 'Times New Roman', Times, serif;
+  }
+  
+  h1, h3, .brandname {
+    font-family: 'Abril Fatface', cursive;
+  }
+  
+  h1 {
+    font-size: 100px;
+    letter-spacing: 4px;
+  }
+  
+  .article-title {
+    font-family: 'Bevan', cursive;
+  }
+  
+  .article-snippet {
+    font-size: 18px;
+  }
