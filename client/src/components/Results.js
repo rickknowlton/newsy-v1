@@ -3,7 +3,7 @@ import { Container, Footer, Row, Col, Card, Button} from "react-materialize";
 
 const Results = props =>
 
-    <Card className="z-depth-0">
+    <Card className="z-depth-1">
       <h4>
         <span className="article-title">
           {props.title}
