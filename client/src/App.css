@@ -18,3 +18,13 @@ body, input {
   .article-snippet {
     font-size: 18px;
   }
+
+
+  /* Media Queries */
+
+  @media screen and (max-width: 600px) {
+    h1 {
+        font-size: 80px;
+        letter-spacing: 4px;
+      }
+  }
