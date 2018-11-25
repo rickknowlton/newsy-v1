@@ -35,7 +35,7 @@ router.get('/*', (req,res) =>{
 
 app.use(router);
 
-const db = process.env.MONGODB_URI || 'mongodb://localhost/nyt-react';
+const db = process.env.MONGODB_URI || 'mongodb://localhost/newsy';
 mongoose.connect(db,
     (err)=>{
     if (err) throw err;
