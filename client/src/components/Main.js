@@ -116,21 +116,18 @@ class Main extends Component {
           </Card>
           {/* Search Form and Results Section */}
           <Card>
-          <div className="row">
-              <div className="col s12">
+
           <Search 
           handleTopicChange={this.handleTopicChange} 
           handleStartYearChange={this.handleStartYearChange} 
           handleEndYearChange={this.handleEndYearChange} 
           handleFormSubmit={this.handleFormSubmit} 
           renderArticles={this.renderArticles} />
-          </div>
-          </div>
+
           </Card>
           {/* Saved Articles Section */}
           <Card>
-            <div className="row">
-              <div className="col s12">
+
                     <h3>
                       <strong>
                         <i className="far fa-bookmark" aria-hidden="true" /> Saved Articles
@@ -139,8 +136,7 @@ class Main extends Component {
                   <div className="card-body">
                     <ul className="list-group">{this.renderSaved()}</ul>
                   </div>
-                </div>
-            </div>
+
             </Card>
           <Footer
                   moreLinks={

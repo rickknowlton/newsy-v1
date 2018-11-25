@@ -4,6 +4,8 @@ import { Container, Row, Col, Card, Button} from "react-materialize";
 
 const Search = props =>
 <div>
+    <div className="row">
+      <div className="col-lg-12">
             <h3>
               <strong>
                 <i className="fa fa-search" aria-hidden="true"></i> Search
@@ -26,7 +28,8 @@ const Search = props =>
               <Button waves='light' onClick={props.handleFormSubmit} type="submit" className="blue right-align">Submit</Button>
               </div>
             </form>
-
+        </div>
+    </div>
 
     <br/><br/>
 

@@ -3,11 +3,13 @@ import { Container, Footer, Row, Col, Card, Button} from "react-materialize";
 
 
 const Saved = props =>
+<div className="row">
+<div className="col-lg-12">
   <Card>
     <li>
       <h4>
        <span className="article-title">
-          <em>{props.title}</em>
+            {props.title}
         </span>
         <p>
         <span className="article-snippet">
@@ -24,5 +26,7 @@ const Saved = props =>
       <p>Date Published: {props.date}</p>
     </li>
   </Card>
+        </div>
+        </div>
 
 export default Saved;
