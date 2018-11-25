@@ -1,38 +1,42 @@
 {
-    "name": "newsy",
-    "version": "1.0.0",
-    "description": "newsy is a MERN stack application built to deliver and save articles on demand from the New York Times.",
-    "main": "server.js",
-    "scripts": {
-      "server": "node server.js",
-      "client": "cd client && npm run start",
-      "start": "./node_modules/.bin/concurrently \"./node_modules/.bin/nodemon\" \"npm run client\"",
-      "build": "cd client && npm run build",
-      "heroku-postbuild": "npm build",
-      "heroku-prebuild": "cd client && npm install",
-      "deploy": "yarn build && git add . && git commit -m \"Building for production\" && git push heroku master"
-    },
-    "repository": {
-      "type": "git",
-      "url": "git+https://github.com/rickknowlton/newsy.git"
-    },
-    "keywords": [],
-    "author": "",
-    "license": "ISC",
-    "bugs": {
-      "url": "https://github.com/rickknowlton/newsy/issues"
-    },
-    "homepage": "https://github.com/rickknowlton/newsy#readme",
-    "dependencies": {
-      "bluebird": "^3.5.8",
-      "body-parser": "^1.18.3",
-      "express": "^4.16.4",
-      "mongoose": "^5.3.13",
-      "react-materialize": "^2.5.0"
-    },
-    "devDependencies": {
-      "concurrently": "^4.1.0",
-      "nodemon": "^1.18.6"
-    }
+  "name": "newsy",
+  "version": "1.0.0",
+  "description": "newsy is a MERN stack application built to deliver and save articles on demand from the New York Times.",
+  "main": "server.js",
+  "scripts": {
+    "server": "node server.js",
+    "client": "cd client && npm run start",
+    "start": "./node_modules/.bin/concurrently \"./node_modules/.bin/nodemon\" \"npm run client\"",
+    "build": "cd client && npm run build",
+    "heroku-postbuild": "npm build",
+    "heroku-prebuild": "cd client && npm install",
+    "deploy": "yarn build && git add . && git commit -m \"Building for production\" && git push heroku master"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rickknowlton/newsy.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rickknowlton/newsy/issues"
+  },
+  "homepage": "https://github.com/rickknowlton/newsy#readme",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "bluebird": "^3.5.3",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "mongoose": "^5.3.13",
+    "react": "^16.6.3",
+    "react-materialize": "^2.5.0",
+    "react-router-dom": "^4.3.1",
+    "react-scripts": "^2.1.1",
+    "scripts": "^0.1.0"
+  },
+  "devDependencies": {
+    "concurrently": "^4.1.0",
+    "nodemon": "^1.18.6"
   }
-  
+}
