@@ -12,15 +12,15 @@ const Search = props =>
               </strong>
             </h3>
             <form>
-              <div className="form-group">
+              <div className="input-field">
                 <label htmlFor="topic">Topic</label>
-                <input onChange={props.handleTopicChange} type="text" className="form-control" id="topic" aria-describedby="emailHelp" />
+                <input onChange={props.handleTopicChange} type="text" className="form-control" id="topic" />
               </div>
-              <div className="form-group">
+              <div className="input-field">
                 <label htmlFor="start-year">Start Year(YYYY)</label>
                 <input onChange={props.handleStartYearChange} type="text" className="form-control" id="start-year" />
               </div>
-              <div className="form-group">
+              <div className="input-field">
                 <label htmlFor="end-year">End Year(YYYY)</label>
                 <input onChange={props.handleEndYearChange} type="text" className="form-control" id="end-year" />
               </div>

@@ -15,12 +15,10 @@ class Main extends Component {
     saved: []
   };
 
-  // When the component mounts, get a list of all saved articles and update this.state.saved
   componentDidMount() {
     this.getSavedArticles()
   }
 
-  // Method for getting saved articles (all articles) from the db
   getSavedArticles = () => {
     API.getArticle()
       .then((res) => {
@@ -28,7 +26,6 @@ class Main extends Component {
       });
   }
 
-  // A helper method for rendering one search results div for each article
   renderArticles = () => {
     return this.state.articles.map(article => (
       <Results
@@ -44,7 +41,6 @@ class Main extends Component {
     ));
   }
 
-  // A helper method for rendering one div for each saved article
   renderSaved = () => {
     return this.state.saved.map(save => (
       <Saved
@@ -60,22 +56,18 @@ class Main extends Component {
     ));
   }
 
-  // Keep track of what user types into topic input so that input can be grabbed later
   handleTopicChange = (event) => {
     this.setState({ topic: event.target.value });
   }
 
-  // Keep track of what user types into topic input so that input can be grabbed later
   handleStartYearChange = (event) => {
     this.setState({ startYear: event.target.value });
   }
 
-  // Keep track of what user types into topic input so that input can be grabbed later
   handleEndYearChange = (event) => {
     this.setState({ endYear: event.target.value });
   }
 
-  // When the search form submits, perform NYT api search with user input
   handleFormSubmit = (event) => {
     event.preventDefault();
     console.log("Getting NYT Articles");
@@ -89,7 +81,6 @@ class Main extends Component {
       });
   }
 
-  // When save article button is clicked, add article to db
   handleSaveButton = (id) => {
     const findArticleByID = this.state.articles.find((el) => el._id === id);
     console.log("findArticleByID: ", findArticleByID);
@@ -98,7 +89,6 @@ class Main extends Component {
     .then(this.getSavedArticles());
   }
 
-  // When delete article button is clicked, remove article from db
   handleDeleteButton = (id) => {
     API.deleteArticle(id)
       .then(this.getSavedArticles());
@@ -111,33 +101,30 @@ class Main extends Component {
               <strong>newsy.</strong>
             </h1>
             <h4 className="center-align">
-              Use <span className="brandname">newsy</span> to dig deep into the New York Times archives to find everything on topic of your choice.
+              Use <span className="brandname">newsy</span> to dig deep into the New York Times archives to find everything on the topic of your choice.
             </h4>
           </Card>
-          {/* Search Form and Results Section */}
-          <Card>
 
+          <Card>
           <Search 
           handleTopicChange={this.handleTopicChange} 
           handleStartYearChange={this.handleStartYearChange} 
           handleEndYearChange={this.handleEndYearChange} 
           handleFormSubmit={this.handleFormSubmit} 
           renderArticles={this.renderArticles} />
-
           </Card>
-          {/* Saved Articles Section */}
-          <Card>
 
+          <Card>
                     <h3>
                       <strong>
                         <i className="far fa-bookmark" aria-hidden="true" /> Saved Articles
                       </strong>
                     </h3>
-                  <div className="card-body">
-                    <ul className="list-group">{this.renderSaved()}</ul>
+                  <div>
+                    <ul>{this.renderSaved()}</ul>
                   </div>
+          </Card>
 
-            </Card>
           <Footer
                   moreLinks={
                     <a className="grey-text text-lighten-4 right" href="https://rickknowlton.github.io/">© 2018 | Rick Knowlton</a>
@@ -145,7 +132,7 @@ class Main extends Component {
                   className='blue lighten-1'>
                   <h5 className="white-text">About <span className="brandname">newsy</span></h5>
                   <p className="grey-text text-lighten-4"><span className="brandname">newsy</span> is a MERN stack application built to deliver and save articles on demand from the New York Times.</p>
-                  <a className="grey-text text-lighten-3" href="https://www.github.com/rickknowlton/newsy"><i className="fab fa-github" aria-hidden="true" /> Checkout the Repo on Github</a>
+                  <a className="grey-text text-lighten-3" href="https://www.github.com/rickknowlton/newsy"><i className="fab fa-github" aria-hidden="true" /> Check out the Repo on Github</a>
           </Footer>
       </div>;
   }
