@@ -19,10 +19,10 @@ https://newsyapp.herokuapp.com/
 - Navigate to localhost:3001 to access the application.
 
 ## <a name="technologies"></a> Technologies
-- Node
-- Express
 - Mongo
+- Express
 - React
+- Node
 - Materialize
 - Heroku
 - HTML/CSS/JS

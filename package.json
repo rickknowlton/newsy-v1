@@ -13,8 +13,7 @@
     "build": "cd client && npm run build",
     "heroku-prebuild": "cd client && npm install",
     "heroku-postbuild": "npm run build"
-},
-
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/rickknowlton/newsy.git"
