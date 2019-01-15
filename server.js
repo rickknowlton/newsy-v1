@@ -4,6 +4,7 @@ const bodyParser = require('body-parser');
 const path = require('path');
 const bluebird = require('bluebird');
 
+// Allows port to be set automatically, defaults to 3001
 const PORT = process.env.PORT || 3001;
 mongoose.Promise = bluebird;
 const app = express();
