@@ -2,7 +2,7 @@ import axios from "axios";
 
 const api = {
   searchNYT: function(topic, startYear, endYear) {
-    const API_KEY = 'b9f91d369ff59547cd47b931d8cbc56b:0:74623931';
+    const API_KEY = 'YD8ozXyR7HPZCRYvvBSb8GNVl84zowx8';
     let queryURL = `https://api.nytimes.com/svc/search/v2/articlesearch.json?api-key=`+API_KEY+`&q=`;
     
     queryURL += topic;

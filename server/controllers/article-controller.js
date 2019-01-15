@@ -11,7 +11,7 @@ module.exports = {
       },
 
     insert: function (req, res) {
-        console.log("Adding saved artice to the database");
+        console.log("Adding a saved artice to the database");
         console.log("req.body: ", req.body);
         Article.create(req.body).then(function (doc) {
             res.json(doc);
