@@ -1,6 +1,6 @@
 {
   "name": "newsy",
-  "version": "1.0.2",
+  "version": "1.2.2",
   "description": "newsy is a MERN stack application built to deliver and save articles on demand from the New York Times.",
   "main": "server.js",
   "scripts": {
