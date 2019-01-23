@@ -14,7 +14,7 @@ https://newsyapp.herokuapp.com/
 ## <a name="installation"></a> Local Installation
 - Clone/download the repo.
 - Open the root of the repo in your terminal.
-- In the root folder run `npm install` to install the required Node modules, once that's finished, navigate to the client folder via `cd client` and once again run `npm install`.
+- In the root folder run `npm ci` to install the required Node modules, once that's finished, navigate to the client folder via `cd client` and once again run `npm ci`.
 - Once Node modules have been installed run `npm start` to spin up the server.
 - Navigate to localhost:3001 to access the application.
 
