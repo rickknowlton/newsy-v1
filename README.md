@@ -30,3 +30,4 @@ https://newsyapp.herokuapp.com/
 ## <a name="feature-enhancements"></a> Future Feature Enhancements
 <li>Scrape from Multiple News Sources</li>
 <li>User Authentication</li>
+
